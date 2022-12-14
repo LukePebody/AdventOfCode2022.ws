@@ -3,11 +3,11 @@ from state import State
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    code   = "Uncompiled/2022/day3_2.wsc"
-    comp     = "Compiled/2022/day3_2.ws"
-    input       = "Input/2022/day3_test.in"
-    output     = "Output/2022/day3.out"
-    log          = "Logs/2022/day3.log"
+    code   = "Uncompiled/2022/day14_2.wsc"
+    comp     = "Compiled/2022/day14_2.ws"
+    input       = "Input/2022/day14.in"
+    output     = "Output/2022/day14.out"
+    log          = "Logs/2022/day14.log"
 
     verbosity = []
 

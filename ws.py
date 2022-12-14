@@ -140,8 +140,16 @@ class ws:
         self.log.writelines([f"Stack={self.stack}\n"])
         if True:
             for (u, v) in sorted(self.memory.items()):
-                if u > 9 and u < self.memory[4] * 1:
+                if u >= 100 and u < self.memory[2]:
+                    continue
+                if u >= self.memory[2] and u < self.memory[9]:
                     continue
                 vc = f" '{chr(v)}'" if (v >= 32 and v <= 126) else ""
                 self.log.writelines([f"Memory[{u}]={v}{vc}\n"])
+        if 9 in self.memory:
+            for i in range(self.memory[8]):
+                self.log.writelines("".join(
+                    ".+#o"[self.memory[k]]
+                    for k in range(self.memory[2]+self.memory[7]*i,
+                                   self.memory[2]+self.memory[7]*(i+1)))+"\n")
         self.log.writelines(["\n"])
